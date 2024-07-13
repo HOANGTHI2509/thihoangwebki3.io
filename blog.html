@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web ban hang</title>
+    <link rel="icon" href="/BTL-Font-end/img/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/BTL-Font-end/css/style.css">
+    <style>
+        /* Quan xuong thi menu cung se theo*/
+        #header {
+            position: sticky;
+            top: 0;
+            background-color: #fff; 
+            z-index: 100;
+        }
+        #blog .blog-post {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#blog .blog-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#blog .blog-image img {
+  width: 100%;
+  height: auto;
+}
+
+#blog .blog-content {
+  flex: 2;
+}
+#blog {
+  margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="/BTL-Font-end/img/logo.png"  alt="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên Hệ</a></li>
+                <li><a href="#" id="cartIcon"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <!--phần giỏ hàng-->
+        <div id="cart" class="cart">
+            <button id="closeCartButton">X</button>
+            <h2>Giỏ Hàng</h2>
+            <ul id="cart-items"></ul>
+            <div id="total-price"></div>
+            <button id="checkout-button">Thanh Toán</button>
+        </div>
+        
+    </section>
+
+    <section id="blog">
+        <div class="blog-post">
+          <div class="blog-image">
+            <img src="/BTL-Font-end/img/bl1.png" alt="Blog Post Image">
+          </div>
+          <div class="blog-content">
+            <h3>Đỗ Mạnh Cường tung dòng thiết kế mới</h3>
+            <p>Các thiết kế mới của Đỗ Mạnh Cường có đường cắt, phom dáng trẻ trung và táo bạo hơn.</p>
+          </div>
+        </div>
+        <!-- Add more blog posts as needed -->
+        <div class="blog-post">
+            <div class="blog-image">
+              <img src="/BTL-Font-end/img/bl2.png" alt="Blog Post Image">
+            </div>
+            <div class="blog-content">
+              <h3>10 ý tưởng phối đồ trắng</h3>
+              <p>Diện đầm maxi trắng và túi cói là một trong những cách mặc được nhiều cô gái yêu thích trong mùa hè.</p>
+            </div>
+          </div>
+          <div class="blog-post">
+            <div class="blog-image">
+              <img src="/BTL-Font-end/img/bl3.png" alt="Blog Post Image">
+            </div>
+            <div class="blog-content">
+              <h3>Ba bộ váy cưới tôn dáng của vợ Đặng Văn Lâm</h3>
+              <p>Yến Xuân - vợ thủ môn Đặng Văn Lâm - chọn váy quây ngực và lệch vai, tôn hình thể cân đối trong đám cưới.</p>
+            </div>
+          </div>
+        
+          
+      </section>
+      <footer>
+        <p>© 2024 Shop TICKBET </p>
+        <p>Hoàng Văn Thi CNTT 17-01(1771020643) </p>
+        <p><i class="fa-solid fa-envelope"></i>Liên hệ: thihoang139hn@icloud.com</a></p>
+        <p>Địa chỉ: 123 Đường Phố, Liên Hồng, Hà Nội, Việt Nam</p>
+    </footer>
+
+
+    <script src="/BTL-Font-end/js/giohang.js"></script>
+</body>
+</html>

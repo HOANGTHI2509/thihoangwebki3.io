@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web ban hang</title>
+    <link rel="icon" href="/BTL-Font-end/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/BTL-Font-end/css/style.css">
+   
+   <style>
+    /* Quan xuong thi menu cung se theo*/
+    #header {
+            position: sticky;
+            top: 0;
+            background-color: #fff; 
+            z-index: 100;
+        }
+   </style>
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#"><img src="/BTL-Font-end/img/logo.png"  alt="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên Hệ</a></li>
+                <li><a href="#" id="cartIcon"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+      <!--phần giỏ hàng-->
+      <div id="cart" class="cart">
+        <button id="closeCartButton">X</button>
+        <h2>Giỏ Hàng</h2>
+        <ul id="cart-items"></ul>
+        <div id="total-price"></div>
+        <button id="checkout-button">Thanh Toán</button>
+    </div>
+    
+    <div id="warapper">
+        <div class="headline">
+            <h3 id="chinhchu">SẢN PHẨM</h3>
+        </div>
+        <h6>SHOP / Sản Phẩm</h6>
+        <ul class="products">
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp1.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/sp1.jpg" alt="" href="/BTL-Font-end/html/sp1.html" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp1.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="1" data-product-name="Áo Cộc TARASHER" data-product-price="60" data-product-image="/BTL-Font-end/img/sp1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">HÀNG HOT</a>
+                        <a href="" class="products-name">Áo Cộc TARASHER</a>
+                        <div class="product-price">$60</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp2.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/a1.jpg" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp2.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="2" data-product-name="Áo Cộc Tay" data-product-price="30" data-product-image="/BTL-Font-end/img/a1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Cộc tay</a>
+                        <div class="product-price">$30</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp3.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/w1.jpg" alt="" href="/BTL-Font-end/html/sp3.html" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp3.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="3" data-product-name="Áo cổ bẻ" data-product-price="60" data-product-image="/BTL-Font-end/img/w1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">HÀNG HOT</a>
+                        <a href="" class="products-name">Áo Cổ bẻ</a>
+                        <div class="product-price">$20</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp4.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/r1.jpg" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp4.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="4" data-product-name="Áo cộc họa tiết" data-product-price="30" data-product-image="/BTL-Font-end/img/r1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Cộc họa tiết</a>
+                        <div class="product-price">$15</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp5.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/z1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp5.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="5" data-product-name="Áo Khoác" data-product-price="110" data-product-image="/BTL-Font-end/img/z1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Khoác</a>
+                        <div class="product-price">$110</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp6.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/x1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp6.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="6" data-product-name="Áo Khoác" data-product-price="110" data-product-image="/BTL-Font-end/img/x1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Khoác</a>
+                        <div class="product-price">$110</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp7.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/c1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp6.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="7" data-product-name="Quần bò" data-product-price="70" data-product-image="/BTL-Font-end/img/c1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Quần bò</a>
+                        <div class="product-price">$70</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp8.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/v1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp8.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="8" data-product-name="Quần jean" data-product-price="70" data-product-image="/BTL-Font-end/img/v1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Quần jean ống rộng</a>
+                        <div class="product-price">$80</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div id="warapper">
+        <div class="headline">
+           
+        </div>
+       
+        <ul class="products">
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp1.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/sp1.jpg" alt="" href="/BTL-Font-end/html/sp1.html" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp1.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="1" data-product-name="Áo Cộc TARASHER" data-product-price="60" data-product-image="/BTL-Font-end/img/sp1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">HÀNG HOT</a>
+                        <a href="" class="products-name">Áo Cộc TARASHER</a>
+                        <div class="product-price">$60</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp2.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/a1.jpg" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp2.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="2" data-product-name="Áo Cộc Tay" data-product-price="30" data-product-image="/BTL-Font-end/img/a1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Cộc tay</a>
+                        <div class="product-price">$30</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp3.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/w1.jpg" alt="" href="/BTL-Font-end/html/sp3.html" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp3.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="3" data-product-name="Áo cổ bẻ" data-product-price="60" data-product-image="/BTL-Font-end/img/w1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">HÀNG HOT</a>
+                        <a href="" class="products-name">Áo Cổ bẻ</a>
+                        <div class="product-price">$20</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp4.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/r1.jpg" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp4.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="4" data-product-name="Áo cộc họa tiết" data-product-price="30" data-product-image="/BTL-Font-end/img/r1.jpg">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Cộc họa tiết</a>
+                        <div class="product-price">$15</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp5.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/z1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp5.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="5" data-product-name="Áo Khoác" data-product-price="110" data-product-image="/BTL-Font-end/img/z1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Khoác</a>
+                        <div class="product-price">$110</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp6.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/x1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp6.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="6" data-product-name="Áo Khoác" data-product-price="110" data-product-image="/BTL-Font-end/img/x1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Áo Khoác</a>
+                        <div class="product-price">$110</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp7.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/c1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp6.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="7" data-product-name="Quần bò" data-product-price="70" data-product-image="/BTL-Font-end/img/c1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Quần bò</a>
+                        <div class="product-price">$70</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="products-item">
+                    <div class="product-top">
+                        <a href="/BTL-Font-end/html/sp8.html" class="products-thumb">
+                            <img src="/BTL-Font-end/img/v1.png" alt="" >
+                        </a>
+                        <a href="/BTL-Font-end/html/sp8.html" class="product-details-btn">Xem Chi Tiết</a>
+                        <a href="#" class="add-to-cart-btn" data-product-id="8" data-product-name="Quần jean" data-product-price="70" data-product-image="/BTL-Font-end/img/v1.png">Thêm Vào Giỏ Hàng</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="" class="products-cat">Hàng HOT</a>
+                        <a href="" class="products-name">Quần jean ống rộng</a>
+                        <div class="product-price">$80</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="/BTL-Font-end/js/hieuung.js"></script>
+    <script src="/BTL-Font-end/js/giohang.js"></script>
+    <script src="/baitaplon-F-end/js/script.js"></script>
+    <footer>
+        <p>© 2024 Shop TICKBET </p>
+        <p>Hoàng Văn Thi CNTT 17-01(1771020643) </p>
+        <p><i class="fa-solid fa-envelope"></i>Liên hệ: thihoang139hn@icloud.com</a></p>
+        <p>Địa chỉ: 123 Đường Phố, Liên Hồng, Hà Nội, Việt Nam</p>
+    </footer>
+        
+    
+</body>
+</html>

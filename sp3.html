@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/BTL-Font-end/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/BTL-Font-end/css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+
+    <style>
+        .small-img-group{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small-img-col{
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        
+        /* Định dạng cho nút */
+        .buy-btn {
+            background-color: #090909;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .sporduct select{
+            display: block;
+            padding: 5px 10px;
+        }
+        .sporduct input{
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .sporduct input:focus{
+            outline: none;
+        } 
+    
+        /* Định dạng cho phần nội dung */
+        span {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+        .cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 520px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden; /* Add this line to hide the horizontal scrollbar */
+}
+
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart img {
+    margin-right: 10px;
+}
+
+.cart select,
+.cart input[type="number"] {
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.cart button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cart button:hover {
+    background-color: #d32f2f;
+}
+
+.cart #total-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cart #checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cart #checkout-button:hover {
+    background-color: #45a049;
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 32px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Quan xuong thi menu cung se theo*/
+#header {
+            position: sticky;
+            top: 0;
+            background-color: #fff; 
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#"><img src="/BTL-Font-end/img/logo.png"  alt="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên Hệ</a></li>
+                <li><a href="#" id="cartIcon"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <!--phần giỏ hàng-->
+        <div id="cart" class="cart">
+            <button id="closeCartButton">X</button>
+            <h2>Giỏ Hàng</h2>
+            <ul id="cart-items"></ul>
+            <div id="total-price"></div>
+            <button id="checkout-button">Thanh Toán</button>
+        </div>
+        
+    </section>
+    <section class="container sporduct my-5 pt-5">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pd-1" src="/BTL-Font-end/img/w1.jpg" alt="" id="MainImg">
+
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="/BTL-Font-end/img/w2.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/BTL-Font-end/img/w3.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/BTL-Font-end/img/w4.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/BTL-Font-end/img/w5.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>Trang chủ / Sản phẩm / Áo cộc tay</h6>
+                <h3 class="py-4">Áo Cộc TARASHER</h3>
+                <h2>$60</h2>
+                <select class="my-3" id="sizeSelect">
+                    <option value="">Chọn Size</option>
+                    <option value="XXL">XXL</option>
+                    <option value="XL">XL</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>s
+                </select>
+                <input type="number" value="1" id="quantityInput">
+
+                <a href="#" class="add-to-cart-btn" data-product-id="1" data-product-name="Áo cộc tay" data-product-price="60" data-product-image="/BTL-Font-end/img/w1.jpg">Thêm Vào Giỏ Hàng</a>
+                <h4 class="mt-5 mb-1">Mo ta san Pham</h4>
+                <span>Chất liệu: cotton 100% - Top sản phẩm bán chạy nhất shop - Phiên bản giới hạn</span>
+            </div>
+    </section>
+     
+    
+
+    
+   
+    
+    
+    <script src="/BTL-Font-end/js/giohang.js"></script>
+<script src="/BTL-Font-end/js/chuyenanh.js"></script>
+    <footer text-align="center">s
+        <p>© 2024 Shop TICKBET </p>
+        <p>Hoàng Văn Thi CNTT 17-01(1771020643) </p>
+        <p><i class="fa-solid fa-envelope"></i>Liên hệ: thihoang139hn@icloud.com</a></p>
+        <p>Địa chỉ: 123 Đường Phố, Liên Hồng, Hà Nội, Việt Nam</p>
+    </footer>
+
+
+
+</body>
+</html>

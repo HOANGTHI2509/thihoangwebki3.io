@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web ban hang</title>
+    <link rel="icon" href="/BTL-Font-end/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/BTL-Font-end/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/BTL-Font-end/css/style.css">
+    
+   
+   
+    <style>
+  /* Quan xuong thi menu cung se theo*/
+  #header {
+            position: sticky;
+            top: 0;
+            background-color: #fff; 
+            z-index: 100;
+        }
+
+
+
+
+        .social-media-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-media-icons a {
+  margin: 0 10px;
+}
+
+.social-media-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Email form */
+#email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#email-form input[type="email"],
+#email-form textarea {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#email-form input[type="button"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#email-form input[type="button"]:hover {
+  background-color: #0056b3;
+}
+.social-media-icons i {
+  font-size: 50px; /* Adjust the size as needed */
+  margin: 0 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="/BTL-Font-end/img/logo.png"  alt="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Lien He</a></li>
+                <li><a href="#" id="cartIcon"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <!--phần giỏ hàng-->
+        <div id="cart" class="cart">
+            <button id="closeCartButton">X</button>
+            <h2>Giỏ Hàng</h2>
+            <ul id="cart-items"></ul>
+            <div id="total-price"></div>
+            <button id="checkout-button">Thanh Toán</button>
+        </div>
+        
+    </section>
+
+    <div class="social-media-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-bounce" style="color: #2f7593;"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok fa-bounce" style="color: #2f7593;"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-bounce" style="color: #2f7593;"></i></a>
+      </div>
+      
+      
+    <form id="email-form">
+        <input type="email" id="email" name="email" placeholder="Nhập email của bạn">
+        <textarea id="message" name="message" placeholder="Nội dung bạn muốn gửi"></textarea>
+        <input type="button" value="Send" onclick="sendEmail()">
+      </form>
+      
+
+
+      <script>
+        function sendEmail() {
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+        
+          
+        
+          alert("Email đã được gửi thành công!");
+          
+          window.location.href = "home.html";
+        }
+        </script>
+        
+
+
+    <script src="/BTL-Font-end/js/giohang.js"></script>
+    <script src="/BTL-Font-end/js/slideshow.js"></script>
+    <script src="/BTL-Font-end/js/hieuung.js"></script>
+ 
+
+    
+    <footer>
+        <p>© 2024 Shop TICKBET </p>
+        <p>Hoàng Văn Thi CNTT 17-01(1771020643) </p>
+        <p><i class="fa-solid fa-envelope"></i>Liên hệ: thihoang139hn@icloud.com</a></p>
+        <p>Địa chỉ: 123 Đường Phố, Liên Hồng, Hà Nội, Việt Nam</p>
+    </footer>
+</body>
+</html>
+
